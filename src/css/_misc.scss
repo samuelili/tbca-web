@@ -1,0 +1,36 @@
+.max-sm {
+  max-width: 480px !important;
+}
+
+.divider-bottom::after, .small-spacer {
+  display: block;
+  width: 50%;
+  max-width: 40px;
+  height: 3px;
+  background-color: $main-blue-contrast;
+  margin: 20px auto;
+  content: "";
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 6pt;
+  color: #a0a0a0;
+  margin: 20px 0
+}

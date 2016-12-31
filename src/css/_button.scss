@@ -1,0 +1,17 @@
+.btn {
+  border: none;
+  border-radius: 300px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  color: #222;
+  background-color: #fff;
+  border-color: #fff;
+  transition: all .35s;
+}
+
+.btn-xl {
+  padding: 15px 30px;
+}
