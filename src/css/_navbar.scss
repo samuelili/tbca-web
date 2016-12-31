@@ -1,10 +1,9 @@
 .navbar-custom {
-  height: 50px;
   background-color: $main-blue;
   color: $main-blue-contrast;
 
   .navbar-collapse {
-    background-color: $main-blue;
+    //background-color: $main-blue;
 
     &.collapsing, &.in {
       ul {
@@ -18,7 +17,6 @@
   .navbar-collapse:not(.in):not(.collapsing) ul,
   .navbar-collapse:not(.in):not(.collapsing) li,
   .navbar-collapse:not(.in):not(.collapsing) a {
-    height: 50px;
     @include transition-all(350ms);
   }
 
@@ -48,7 +46,7 @@
   background-color: rgba(0, 0, 0, 0);
 
   .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0);
+    //background-color: rgba(0, 0, 0, 0);
   }
 }
 
