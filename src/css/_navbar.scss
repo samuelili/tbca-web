@@ -3,7 +3,21 @@
   background-color: $main-blue;
   color: $main-blue-contrast;
 
-  .container-fluid, .navbar-header, .navbar-collapse, ul, li, a {
+  .navbar-collapse {
+    background-color: $main-blue;
+
+    &.collapsing, &.in {
+      ul {
+        width: calc(100% + 30px);
+      }
+    }
+    @include transition-all(350ms);
+  }
+
+  .container-fluid, .navbar-collapse:not(.in):not(.collapsing),
+  .navbar-collapse:not(.in):not(.collapsing) ul,
+  .navbar-collapse:not(.in):not(.collapsing) li,
+  .navbar-collapse:not(.in):not(.collapsing) a {
     height: 50px;
     @include transition-all(350ms);
   }
@@ -19,18 +33,23 @@
   .navbar-brand {
     text-transform: lowercase;
     font-family: 'Roboto Mono', monospace;
+    @include transition-all(350ms);
   }
 
   ul > li > a:hover, ul > li.active > a, ul > li > a:focus {
     color: #fff;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
   }
 
   @include transition-all(350ms);
 }
 
 .navbar-custom.at-top {
-  background-color: rgba(0, 0, 0 , 0);
+  background-color: rgba(0, 0, 0, 0);
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 @media(min-width: 768px) {
@@ -38,7 +57,10 @@
     box-shadow: none;
     height: 70px;
 
-    .container-fluid, .navbar-header, .navbar-collapse, ul, li, a {
+    .container-fluid, .navbar-collapse:not(.in):not(.collapsing),
+    .navbar-collapse:not(.in):not(.collapsing) ul,
+    .navbar-collapse:not(.in):not(.collapsing) li,
+    .navbar-collapse:not(.in):not(.collapsing) a {
       height: 70px;
     }
 

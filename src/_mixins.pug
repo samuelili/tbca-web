@@ -6,15 +6,14 @@ mixin navbar(item)
     .container-fluid
       .navbar-header
         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
-          span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
 
         a.navbar-brand(href='/') TBCA
-      .collapse.navbar-collapse.pull-right#navbar-collapse
-        ul.nav.navbar-nav
+      .collapse.navbar-collapse.text-right#navbar-collapse
+        ul.nav.navbar-nav.pull-right
           li(class=item == 1 ? 'active' : '')
-            a(href="#") Job
+            a.text-right(href="#") Job
           li(class=item == 2 ? 'active' : '')
-            a(href="#") About
+            a.text-right(href="#") About
