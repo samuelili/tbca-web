@@ -1,0 +1,16 @@
+extends _layout
+
+block head
+  title TBCA
+  script(src="/js/index.js")
+
+block body
+
+  +navbar(0)
+
+  .intro(style="background-image: url('/images/job-intro.jpeg')")
+    .content
+      h3 We are
+      h1.hidden-xs looking
+      h1.visible-xs(style="font-size: 48pt") looking
+      p We are currently hiring innovative and smart engineers.
