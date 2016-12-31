@@ -2,7 +2,7 @@
    Created by Samuel on 12/29/2016.
 
 mixin navbar(item)
-  nav.navbar.navbar-custom.navbar-fixed-top
+  nav.navbar.navbar-custom.navbar-fixed-top.at-top
     .container-fluid
       .navbar-header
         button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
@@ -14,7 +14,7 @@ mixin navbar(item)
         a.navbar-brand(href='/') TBCA
       .collapse.navbar-collapse.pull-right#navbar-collapse
         ul.nav.navbar-nav
-          li
+          li(class=item == 1 ? 'active' : '')
             a(href="#") Job
-          li
+          li(class=item == 2 ? 'active' : '')
             a(href="#") About

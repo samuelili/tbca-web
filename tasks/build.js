@@ -14,7 +14,7 @@ gulp.task('build', ['build:pug', 'build:sass']);
 gulp.task('build:pug', function () {
     return gulp.src(path.join(paths.src, '**/[^_]*.pug'))
         .pipe(pug().on('error', function(e) {
-            console.err(e);
+            console.log(e);
         }))
         .pipe(gulp.dest(paths.dest));
 });

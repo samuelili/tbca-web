@@ -3,13 +3,24 @@
   border-radius: 300px;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: 'Roboto Mono', sans-serif;
+
+  @include transition-all(350ms);
 }
 
 .btn-default {
   color: #222;
   background-color: #fff;
   border-color: #fff;
-  transition: all .35s;
+}
+
+.btn-colored {
+  color: $main-blue-contrast;
+  background-color: $main-blue;
+
+  &:hover {
+    color: $main-blue-contrast;
+  }
 }
 
 .btn-xl {

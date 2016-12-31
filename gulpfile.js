@@ -33,7 +33,7 @@ gulp.task('dev', ['clean', 'copy', 'build'], function () { // watch
         }
     });
 
-    gulp.watch([path.join(paths.src, '*.pug'), 'build/*.pug'], ['build:pug', 'reload']);
+    gulp.watch([path.join(paths.src, '*.pug'), 'src/**/*.pug'], ['build:pug', 'reload']);
     gulp.watch(path.join(paths.src, '**/*.scss'), ['build:sass', 'reload']);
     gulp.watch(path.join(paths.static, '**/*.*'), ['copy:static', 'reload']);
 });

@@ -1,6 +1,12 @@
 .navbar-custom {
+  height: 50px;
   background-color: $main-blue;
   color: $main-blue-contrast;
+
+  .container-fluid, .navbar-header, .navbar-collapse, ul, li, a {
+    height: 50px;
+    @include transition-all(350ms);
+  }
 
   a {
     color: $main-blue-contrast;
@@ -10,25 +16,30 @@
     background-color: $main-blue-contrast;
   }
 
-  @include transition-all(500ms);
+  @include transition-all(350ms);
+}
+
+.navbar-custom.at-top {
+  background-color: rgba(0, 0, 0 , 0);
 }
 
 @media(min-width: 768px) {
-  &.at-top {
-    background-color: rgba(0,0,0,0);
+  .navbar-custom.at-top {
+    box-shadow: none;
+    height: 70px;
 
-    .container-fluid {
+    .container-fluid, .navbar-header, .navbar-collapse, ul, li, a {
       height: 70px;
+    }
 
-      .navbar-header {
-        height: 70px;
+    ul > li > a {
+      padding: 26px 15px;
+    }
 
-        .navbar-brand {
-          height: inherit;
-          font-size: 2em;
-          padding: 23px;
-        }
-      }
+    .navbar-brand {
+      height: inherit;
+      font-size: 2em;
+      padding: 23px;
     }
   }
 }

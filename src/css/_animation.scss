@@ -1,0 +1,60 @@
+#animate-tbca-title {
+  &::before {
+    display: inline-block;
+    height: 64pt;
+    content: "";
+    @include animation(tbca-title 2s linear 500ms forwards);
+  }
+  &::after {
+    display: inline-block;
+    height: 48pt;
+    width: 5pt;
+    background: #fff;
+
+    // <single-animation> = <time>
+    // <single-timing-function>
+    // <time>
+    // <single-animation-iteration-count>
+    // <single-animation-direction>
+    // <single-animation-fill-mode>
+    // <single-animation-play-state>
+    // [ none | <keyframes-name> ]
+    @include animation(tbca-title-type 1s linear 0s infinite);
+
+    opacity: 0;
+    content: "";
+  }
+}
+
+@include keyframes(tbca-title-type) {
+  0% {
+    opacity: 0;
+  }
+  49.9% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(tbca-title) {
+  0% {
+    content: "";
+  }
+  25% {
+    content: "t";
+  }
+  50% {
+    content: "tb";
+  }
+  75% {
+    content: "tbc";
+  }
+  100% {
+    content: "tbca";
+  }
+}
