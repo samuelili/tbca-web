@@ -3,13 +3,14 @@
 
 @import "_navbar";
 @import "_intro";
-@import "_animation";
 @import "_typography";
 @import "_button";
 @import "_panel";
+@import "_animation";
 @import "_misc";
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'Source Code Pro', sans-serif;
   font-weight: 300;
@@ -22,4 +23,8 @@ body {
 
 .bg-primary {
   background: $main-blue-light;
+}
+
+.position-relative {
+  position: relative;
 }

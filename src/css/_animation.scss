@@ -1,24 +1,10 @@
 #animate-tbca-title {
-  &::before {
-    display: inline-block;
-    height: 64pt;
-    content: "";
-    @include animation(tbca-title 2s linear 500ms forwards);
-  }
   &::after {
+    position: relative;
     display: inline-block;
     height: 48pt;
     width: 5pt;
     background: #fff;
-
-    // <single-animation> = <time>
-    // <single-timing-function>
-    // <time>
-    // <single-animation-iteration-count>
-    // <single-animation-direction>
-    // <single-animation-fill-mode>
-    // <single-animation-play-state>
-    // [ none | <keyframes-name> ]
     @include animation(tbca-title-type 1s linear 0s infinite);
 
     opacity: 0;
@@ -41,20 +27,35 @@
   }
 }
 
-@include keyframes(tbca-title) {
-  0% {
-    content: "";
+$transition-delay-base: 100ms;
+$transition-speed: 500ms;
+
+.fade-bottom {
+  @include transform(translateY(70%) scale(0.3));
+  opacity: 0;
+
+  &.animate {
+    @include transform(translateY(0%) scale(1));
+    opacity: 1;
   }
-  25% {
-    content: "t";
+
+  @include transition-all($transition-speed);
+  @include transition-delay($transition-delay-base);
+}
+
+.zoom-in {
+  @include transform(scale(0.6));
+  opacity: 0;
+
+  &.animate {
+    @include transform(scale( 1));
+    opacity: 1;
   }
-  50% {
-    content: "tb";
-  }
-  75% {
-    content: "tbc";
-  }
-  100% {
-    content: "tbca";
-  }
+
+  @include transition-all($transition-speed);
+  @include transition-delay($transition-delay-base);
+}
+
+.delay-1 {
+  @include transition-delay($transition-delay-base + 200ms);
 }

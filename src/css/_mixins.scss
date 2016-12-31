@@ -26,6 +26,14 @@
   transform: translateX(-50%);
 }
 
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
 @mixin animation($animate...) {
   $max: length($animate);
   $animations: '';
@@ -56,4 +64,11 @@
   @keyframes #{$animationName} {
     @content;
   }
+}
+
+@mixin transition-delay($duration) {
+  -webkit-transition-delay: $duration;
+  -moz-transition-delay: $duration;
+  -o-transition-delay: $duration;
+  transition-delay: $duration;
 }

@@ -16,6 +16,16 @@
     background-color: $main-blue-contrast;
   }
 
+  .navbar-brand {
+    text-transform: lowercase;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  ul > li > a:hover, ul > li.active > a {
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+  }
+
   @include transition-all(350ms);
 }
 
