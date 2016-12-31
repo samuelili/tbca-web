@@ -21,7 +21,7 @@
     font-family: 'Roboto Mono', monospace;
   }
 
-  ul > li > a:hover, ul > li.active > a {
+  ul > li > a:hover, ul > li.active > a, ul > li > a:focus {
     color: #fff;
     background: rgba(0,0,0,0.1);
   }
