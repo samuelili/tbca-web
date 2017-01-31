@@ -1,8 +1,8 @@
-#animate-tbca-title {
+.animate-intro-title {
   &::after {
     position: relative;
     display: inline-block;
-    height: 48pt;
+    height: 64pt;
     width: 5pt;
     background: #fff;
     @include animation(tbca-title-type 1s linear 0s infinite);

@@ -32,7 +32,6 @@ class AnimateText extends Component {
                 ref.setState({
                     text: ref.state.text + ref.titleChars[index]
                 });
-                console.log(ref.titleChars);
                 index++;
             } else
                 clearInterval(ref.timerId);
