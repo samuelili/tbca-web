@@ -1,43 +1,28 @@
-/**
- * Created by Samuel on 12/29/2016.
- */
-
 const gulp = require('gulp');
-
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
 const path = require('path');
-const paths = require('./tasks/paths');
 
-require('./tasks/clean');
-require('./tasks/copy');
-require('./tasks/build');
+gulp.task('default', ['build:sass', 'watch']);
 
-// default
-gulp.task('default', ['clean', 'copy', 'build'], function () { // create small express server
-    var express = require('express');
-    var app = express();
-    app.use(express.static('dist'));
-
-    var port = process.env.PORT || 3000;
-    app.listen(port, function () {
-        console.log("Listening on " + port);
-    });
-});
-
-var browserSync = require('browser-sync').create();
-gulp.task('dev', ['clean', 'copy', 'build'], function () { // watch
-
-    browserSync.init({
-        open: false,
-        server: {
-            baseDir: './dist'
+gulp.task('build:sass', function() {
+  return gulp.src('sass/styles.scss')
+    .pipe(sass({
+      importer: function(url) {
+        if (url[0] == '~')
+          url = url.substr(1);
+        return {
+          file: url
         }
-    });
-
-    gulp.watch([path.join(paths.src, '*.pug'), 'src/**/*.pug'], ['build:pug', 'reload']);
-    gulp.watch(path.join(paths.src, '**/*.scss'), ['build:sass', 'reload']);
-    gulp.watch(path.join(paths.static, '**/*.*'), ['copy:static', 'reload']);
+      },
+      includePaths: ['node_modules/'],
+    }).on('error', sass.logError))
+    .pipe(rename(function(path) {
+      path.basename = "App";
+    }))
+    .pipe(gulp.dest('src'));
 });
 
-gulp.task('reload', function() {
-    browserSync.reload();
+gulp.task('watch', function() {
+  gulp.watch('sass/*.scss', ['build:sass']);
 });

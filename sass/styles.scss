@@ -1,0 +1,30 @@
+@import "_variables";
+@import "_mixins";
+
+@import "_navbar";
+@import "_intro";
+@import "_typography";
+@import "_button";
+@import "_panel";
+@import "_animation";
+@import "_misc";
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 300;
+}
+
+.container-fluid, .intro > .content {
+  max-width: 960px;
+  width: 100%;
+}
+
+.bg-primary {
+  background: $main-blue-light;
+}
+
+.position-relative {
+  position: relative;
+}

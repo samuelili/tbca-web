@@ -1,0 +1,17 @@
+{
+  "name": "src",
+  "main": "index.js",
+  "authors": [
+    "mashedpotats <samuelli4521@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

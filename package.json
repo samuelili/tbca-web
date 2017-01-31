@@ -1,24 +1,21 @@
 {
-  "name": "tbca-web",
-  "version": "0.0.1",
-  "description": "tbca's web page",
-  "main": "index.js",
-  "scripts": {
-    "start": "gulp",
-    "dev": "gulp dev"
-  },
-  "repository": "https://github.com/mashedpotats/tbca-web",
-  "author": "Samuel Li",
-  "license": "MIT",
+  "name": "tbca-web-react",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
-    "browser-sync": "^2.18.5",
-    "del": "^2.2.2",
-    "fs-extra": "^1.0.0",
     "gulp": "^3.9.1",
-    "gulp-pug": "^3.2.0",
-    "gulp-sass": "^3.0.0"
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "react-scripts": "0.8.5"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
