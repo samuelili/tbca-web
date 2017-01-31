@@ -125,10 +125,10 @@
     height: auto;
     width: 100%; }
 
-#animate-tbca-title::after {
+.animate-intro-title::after {
   position: relative;
   display: inline-block;
-  height: 48pt;
+  height: 64pt;
   width: 5pt;
   background: #fff;
   -webkit-animation: tbca-title-type 1s linear 0s infinite;
