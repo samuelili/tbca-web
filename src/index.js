@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Intro from './Intro';
 import './index.css';
+import './css/typography.css';
 
 ReactDOM.render(
   <div id="root">

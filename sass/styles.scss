@@ -1,13 +1,13 @@
-@import "_variables";
+@import "variables";
 @import "_mixins";
 
-@import "_navbar";
-@import "_intro";
-@import "_typography";
-@import "_button";
-@import "_panel";
-@import "_animation";
-@import "_misc";
+@import "navbar";
+@import "intro";
+@import "typography";
+@import "button";
+@import "panel";
+@import "animation";
+@import "misc";
 
 body {
   position: relative;

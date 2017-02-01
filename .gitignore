@@ -24,3 +24,4 @@ jspm_packages
 .yarn-integrity
 bower_components
 dist/
+src/css/

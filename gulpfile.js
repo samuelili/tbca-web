@@ -5,24 +5,20 @@ const path = require('path');
 
 gulp.task('default', ['build:sass', 'watch']);
 
-gulp.task('build:sass', function() {
-  return gulp.src('sass/styles.scss')
-    .pipe(sass({
-      importer: function(url) {
-        if (url[0] == '~')
-          url = url.substr(1);
-        return {
-          file: url
-        }
-      },
-      includePaths: ['node_modules/'],
-    }).on('error', sass.logError))
-    .pipe(rename(function(path) {
-      path.basename = "App";
-    }))
-    .pipe(gulp.dest('src'));
+let componentStyles = ['sass/animation.scss',
+    'sass/button.scss',
+    'sass/intro.scss',
+    'sass/misc.scss',
+    'sass/navbar.scss',
+    'sass/panel.scss',
+    'sass/typography.scss'];
+
+gulp.task('build:sass', function () {
+    return gulp.src(componentStyles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('src/css'));
 });
 
-gulp.task('watch', function() {
-  gulp.watch('sass/*.scss', ['build:sass']);
+gulp.task('watch', ['build:sass'], function () {
+    gulp.watch('sass/*.scss', ['build:sass']);
 });

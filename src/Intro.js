@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './bower_components/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/animation.css';
+import './css/intro.css';
 
 class Base extends Component {
     render() {
