@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import './bower_components/bootstrap/dist/css/bootstrap.min.css';
-import './css/animation.css';
-import './css/intro.css';
+import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
+import '../css/animation.css';
+import '../css/intro.css';
 
-class Base extends Component {
+export class Intro extends Component {
     render() {
         return (
             <div className="intro">
@@ -15,11 +15,11 @@ class Base extends Component {
     }
 }
 
-class AnimateText extends Component {
+export class AnimateText extends Component {
     constructor(props) {
         super();
-        this.titleChars = props.title.split('');
-        this.titleChars.unshift('');
+        this.textChars = props.text.split('');
+        this.textChars.unshift('');
         this.interval = props.interval;
         this.state = {text: ""};
     }
@@ -29,9 +29,9 @@ class AnimateText extends Component {
         let ref = this;
 
         this.timerId = setInterval(function() {
-            if (index !== ref.titleChars.length) {
+            if (index !== ref.textChars.length) {
                 ref.setState({
-                    text: ref.state.text + ref.titleChars[index]
+                    text: ref.state.text + ref.textChars[index]
                 });
                 index++;
             } else
@@ -50,7 +50,4 @@ class AnimateText extends Component {
     }
 }
 
-export default {
-    Base: Base,
-    AnimateText: AnimateText
-};
+export default Intro;

@@ -1,0 +1,10 @@
+@import 'variables';
+
+body {
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 300;
+}
+
+.bg-primary {
+  background: $main-blue-light;
+}
