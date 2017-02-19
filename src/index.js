@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar';
 import Intro, {AnimateText} from './components/Intro';
 import Container from './components/Container';
 import Button from './components/Button';
@@ -8,6 +9,7 @@ import './css/typography.css';
 
 ReactDOM.render(
     <div id="root">
+        <Navbar/>
         <Intro>
             <h3>We are</h3>
             <AnimateText text="tbca" interval="376"/>
