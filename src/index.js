@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Intro, {AnimateText} from './components/Intro';
 import Container from './components/Container';
-import {Spacer} from './components/Misc';
+import Button from './components/Button';
+import {Line, Space} from './components/Misc';
 import './css/typography.css';
 
 ReactDOM.render(
@@ -13,18 +14,20 @@ ReactDOM.render(
             <p>Utilizing blockchain technologies to change the world.</p>
         </Intro>
         <Container bgColor='bg-primary' width="480px">
-            <div className="row margin-top light">
+            <div>
                 <h1>About Us</h1>
-                <Spacer shade="light"/>
+                <Line shade="light"/>
             </div>
             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus id
                 nunc porta ornare.
                 Duis et pulvinar ante. Aenean in tortor vel diam vehicula lacinia eget malesuada diam.
                 Phasellus blandit at sem vitae consectetur.
             </div>
-            <div className="row margin-bottom watch-animate">
-                <div className="btn btn-default btn-xl fade-bottom animate">Learn More</div>
+            <Space space="20px"/>
+            <div className="watch-animate">
+                <Button size="xl" animate="fade-bottom">Learn More</Button>
             </div>
+            <Space space="40px"/>
         </Container>
         <Container width="960px">Hey!</Container>
     </div>,
