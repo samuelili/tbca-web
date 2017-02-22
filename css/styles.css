@@ -1,0 +1,53 @@
+body {
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+.container-fluid {
+    max-width: 820px;
+}
+
+.navbar-brand.active {
+    background-color: #080808;
+}
+
+.spacer {
+    background-color: rgba(0,0,0,0.0);
+}
+
+.spacer-small {
+    height: 1em;
+}
+
+.spacer-mid {
+    height: 5em;
+}
+
+.footer {
+    text-align: center;
+    font-size: 6pt;
+    color: #a0a0a0;
+}
+
+.hero {
+    background-color: #e0e0e0;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 4pt;
+    color: #808080;
+}
+
+.hero .jumbotron {
+    margin-bottom: 0;
+    text-align:center;
+}
+
+.hero .jumbotron img {
+    max-width: 100%;
+}
+
+.no-padding {
+    padding: 0;
+}
