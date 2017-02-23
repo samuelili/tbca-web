@@ -2,6 +2,7 @@ extends _layout
 
 block head
   title TBCA
+  link(type='text/css', rel='stylesheet', href='/css/index.css')
   script(src="/js/index.js")
 
 block body
@@ -12,10 +13,9 @@ block body
 
   .intro
     .content
-      h3 We are
-      h1#animate-tbca-title
-      p Utilizing blockchain technologies to change the world.
+      img(src='/images/tbca.png')
+      p(style='max-width: 100%; margin-top: 100px; font-weight: 700') Utilizing Blockchain technology to change the world.
 
-  include index/_about_summary
-  include index/_services
   include index/_jobs
+  include index/_about
+  include index/_contact

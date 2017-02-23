@@ -1,17 +1,30 @@
 extends _layout
 
 block head
-  title TBCA
-  script(src="/js/index.js")
+    title TBCA
+    script(src="/js/index.js")
 
 block body
 
-  - var item = 2;
+    - var item = 2;
 
-  include _navbar
+    include _navbar
 
-  .intro(style="background-image: url('/images/about-intro.jpeg')")
-    .content
-      h3 Who are
-      h1 US?
-      h3 What do we do?
+    .intro(style="background-image: url('/images/about-intro.jpeg')")
+        .content
+            h3 What's it
+            h1(style='font-size: 52pt') About?
+    .col-xs-12.bg-primary.text-center
+        .container-fluid.max-sm
+            p.margin-top.margin-bottom
+                | TBCASoft is an US-based company developing innovative blockchain technology
+                | specifically for telecommunication carriers.  It’s consortium-based blockchain platform enables
+                | telecommunication carriers to create innovative services to their subscribers under a more secured, robust
+                | , and efficient environment.  TBCASoft is located at Sunnyvale, California, the center of Silicon Valley.
+
+    .col-xs-12.text-center
+        .container-fluid.text-center
+            h1 Come Join Us!
+            .spacer.light
+            .row.margin-bottom.watch-animate
+                a.btn.btn-colored.btn-xl.fade-bottom(href='/contact.html') Contact

@@ -1,18 +1,57 @@
 extends _layout
 
 block head
-  title TBCA
-  script(src="/js/index.js")
+    title TBCA
+    script(src="/js/index.js")
 
 block body
 
-  item=1
+    - var item = 0;
 
-  include _navbar
+    include _navbar
 
-  .intro(style="background-image: url('/images/job-intro.jpeg')")
-    .content
-      h3 We are
-      h1.hidden-xs looking
-      h1.visible-xs(style="font-size: 48pt") looking
-      p We are currently hiring innovative and smart engineers.
+    .intro(style="background-image: url('/images/job-intro.jpeg')")
+        .content
+            h3 We are
+            h1.hidden-xs looking
+            h1.visible-xs(style="font-size: 48pt") looking
+            p We are currently hiring innovative and smart engineers.
+
+    .col-xs-12.bg-primary
+        .container-fluid.max-sm.text-center
+            .row.margin-top.margin-bottom-sm
+                p.lead TBCASoft is constantly hiring the best engineers with very strong analytical skills, and are
+                | enthusiastic about picking up and learning the newest technologies and building the ultimate performing architectures.
+
+    .col-xs-12
+        .container-fluid.text-center
+            h3 What We're Looking For
+            .spacer.dark
+            p.margin-bottom
+                | The engineer will cover a large range of responsibilities, including architecting new applications in
+                | a variety of languages, defining deployment processes, writing effective tests, reviewing code, and
+                | programming. He or she will be expected to interface with both foreign and domestic partners.
+                | The engineer will also contribute to the development of a strong company culture at a fast growing startup.
+
+    .col-xs-12.bg-primary
+        .container-fluid.text-center.max-sm
+            h3 Requirements
+            .spacer.light
+            ul
+                li Eagerness to dive into the world of blockchain technologies!
+                li Understanding of the design and development of backend services at scale
+                li Proficient in at least one OO language like Java, Python, Scala or Ruby
+            h3 Bonus Points
+            .spacer.light
+            ul.margin-bottom
+                li Experience developing production level C/C++ systems
+                li Familiarity with automated deployment and remote configuration tools
+                li Familiarity with networking and/or cryptographic systems
+                li Linux Mastery
+    .col-xs-12
+        .container-fluid.text-center.max-sm
+            h3 Benefits
+            .spacer.dark
+            p.margin-bottom
+                | We offer competitive compensation, benefits, and a healthy work-life balance. We are currently located in
+                a(href='https://www.google.com/maps/place/Plug+and+Play+Tech+Center') Plug&Play Tech Center, Sunnyvale, CA.
