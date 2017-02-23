@@ -29,9 +29,14 @@
   }
 
   .navbar-brand {
-    text-transform: lowercase;
-    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+
     @include transition-all(350ms);
+    img {
+      display: inline-block;
+      height: 100%;
+      @include transition-all(350ms);
+    }
   }
 
   ul > li > a:hover, ul > li.active > a, ul > li > a:focus {
@@ -44,10 +49,6 @@
 
 .navbar-custom.at-top {
   background-color: rgba(0, 0, 0, 0);
-
-  .navbar-collapse {
-    //background-color: rgba(0, 0, 0, 0);
-  }
 }
 
 @media(min-width: 768px) {
@@ -67,9 +68,10 @@
     }
 
     .navbar-brand {
-      height: inherit;
-      font-size: 2em;
-      padding: 23px;
+      height: 70px;
+      img {
+        height: 100%;
+      }
     }
   }
 }
