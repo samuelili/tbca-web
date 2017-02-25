@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+@import 'navbar';
+@import 'intro';
+
+.container-fluid {
+  max-width: 900px;
+}
+
+.intro {
+  h1 {
+    max-width: 80vw;
+    font-size: 48pt;
+  }
+
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80vw;
+  }
+}
+
+hr {
+  border-color: #aaa;
+}

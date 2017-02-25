@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+    head
+
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(charset='UTF-8')
+
+        link(type='text/css', rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(type='text/css', rel='stylesheet', href='/css/news.css')
+        include anayltics.html
+
+        script(type='text/javascript', src='/bower_components/jquery/dist/jquery.min.js')
+        script(type='text/javascript', src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+
+        script(type='text/javascript', src='/js/navbar.js')
+    body
+        block body
+
+block body
+    - var item = 4;
+
+    include _navbar
+
+    .intro(style="background-image: url('/images/news-intro.jpg'); height: 70vh")
+        .content
+            h1 Latest Article:
+            h3=articles[0].title
+
+    .container-fluid
+        each article in articles
+            h1=article.title
+            hr
+            p
+                span.glyphicon.glyphicon-time
+                | &nbsp;#{article.date}
+            div!=article.markdown
+            div(style='margin-bottom: 30px;').text-center
+                a(href=article.fullLink, target='_blank').btn.btn-primary See Full Article
+
+    .col-xs-12.footer.text-center(style='margin-top: 50px;')
+        | © 2016 TBCASoft, Inc.

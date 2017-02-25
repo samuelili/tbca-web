@@ -18,13 +18,23 @@ block body
         .container-fluid.max-sm
             p.margin-top.margin-bottom
                 | TBCASoft is developing an innovative blockchain technology platform designed specifically for the
-                | telecommunications industry. This platform will enable mobile carriers to create new and innovative
-                | services to their subscriber base, all the while operating under a more secured, robust and efficient
-                | environment. TBCASoft is located at the center of Silicon Valley in Sunnyvale, California.
+                | telecommunications industry. This platform will enable mobile carriers to deliver new and innovative
+                | services to their subscriber base, all the while operating under an infrastructure that is more secure,
+                | robust and scalable. TBCASoft is located at the center of Silicon Valley in Sunnyvale, California.
 
     .col-xs-12.text-center
-        .container-fluid.text-center
-            h1 Contact Us!
+        .container-fluid
+            h1 What are we up to?
             .spacer.dark
+            p Latest News:
+            p
+                strong= articles[0].title
             .row.margin-bottom.watch-animate
-                a.btn.btn-colored.btn-xl.fade-bottom(href='/contact.html') Contact
+                a.btn.btn-colored.btn-xl.fade-bottom(href='/news.html') Read the News
+
+    .col-xs-12.text-center.bg-primary
+        .container-fluid
+            h1 Contact Us!
+            .spacer.light
+            .row.margin-bottom.watch-animate
+                a.btn.btn-default.btn-xl.fade-bottom(href='/contact.html') Contact
